@@ -1,0 +1,17 @@
+spec:
+  containers:
+    - name: eap-frontend
+      image: /spcs_app/napp/img_repo/eap_frontend
+      env:
+        VUE_APP_API_URL: /api/snowpark
+    - name: eap-backend
+      image: /spcs_app/napp/img_repo/eap_backend
+    - name: eap-router
+      image: /spcs_app/napp/img_repo/eap_router
+      env:
+        FE_SERVER: 127.0.0.1:8080
+        BE_SERVER: 127.0.0.1:8081
+  endpoints:
+    - name: app
+      port: 8000
+      public: true

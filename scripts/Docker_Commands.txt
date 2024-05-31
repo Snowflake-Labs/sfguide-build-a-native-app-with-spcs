@@ -1,0 +1,23 @@
+login
+    docker login <SNOWFLAKE_REPO>
+
+backend
+	cd backend 
+    docker build --platform linux/amd64 -t eap_backend .
+    cd ..
+    docker tag eap_backend <SNOWFLAKE_REPO>/eap_backend
+	docker push <SNOWFLAKE_REPO>/eap_backend
+
+frontend 
+    cd frontend  
+    docker build --platform linux/amd64 -t eap_frontend . 
+    cd ..
+    docker tag eap_frontend <SNOWFLAKE_REPO>/eap_frontend
+	docker push <SNOWFLAKE_REPO>/eap_frontend
+
+router
+    cd router 
+    docker build --platform linux/amd64 -t eap_router . 
+    cd ..
+    docker tag eap_router <SNOWFLAKE_REPO>/eap_router
+	docker push <SNOWFLAKE_REPO>/eap_router
