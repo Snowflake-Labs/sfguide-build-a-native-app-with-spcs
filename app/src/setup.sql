@@ -37,6 +37,7 @@ BEGIN
             FROM SPECIFICATION_FILE=''' || '/fullstack.yaml' || '''
             QUERY_WAREHOUSE=''' || whname || '''';
 GRANT USAGE ON SERVICE app_public.st_spcs TO APPLICATION ROLE app_user;
+GRANT SERVICE ROLE app_public.st_spcs!ALL_ENDPOINTS_USAGE TO APPLICATION ROLE app_user;
 
 RETURN 'Service started. Check status, and when ready, get URL';
 END;

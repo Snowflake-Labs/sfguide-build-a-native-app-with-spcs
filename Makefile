@@ -1,4 +1,4 @@
-SNOWFLAKE_REPO?=<<repository_url>>
+SNOWFLAKE_REPO?=sfsenorthamerica-demo170.registry.snowflakecomputing.com/spcs_app/napp/img_repo
 BACKEND_IMAGE=eap_backend
 FRONTEND_IMAGE=eap_frontend
 ROUTER_IMAGE=eap_router
