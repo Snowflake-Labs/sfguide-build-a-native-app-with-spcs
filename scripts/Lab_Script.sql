@@ -1,12 +1,3 @@
-
---Step 2.1 - Create Security Integration
---use account admin to create snowservices ingress oauth
-use role accountadmin;
-create security integration if not exists snowservices_ingress_oauth
-  type=oauth
-  oauth_client=snowservices_ingress
-  enabled=true;
-
 --Step 3.1 - Create NASPCS role and Grant Privileges
 --these series of steps create and grant the naspcs role which will be our 'provider' role 
 use role accountadmin;
